@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PageController!{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <h1>Registration confirmation</h1>
+    <p>Thank you, your profile was successfully created.</p>
+    <p>Don't forget to verify your email address.
+    <br>An email has been sent to you with a link to verify your email address.</p>
+{% endblock %}
